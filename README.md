@@ -19,3 +19,5 @@ Running app a2n in version 0.1.
 
 In that case, you are good to go and the only thing I can say is: **Happy Hacking!**
 
+P.S.: I'd like to transform this to an assistant one day. I mean it! Really!
+
