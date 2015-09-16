@@ -24,7 +24,7 @@ setup(
     name = __PROJECT__,
     version = __VERSION__,
     description = __DESCRIPTION__,
-    author = "Václav Pavlín",
+    author = "Vaclav Pavlin",
     author_email = 'vpavlin@redhat.com',
     url = '',
     license = "LGPL3",

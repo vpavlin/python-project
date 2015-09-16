@@ -3,6 +3,11 @@
 PROJECT=$1
 TO=$2
 
+if [ "$#" -lt 2 ]; then
+    echo "Usage: $0 PROJECT DEST_PATH"
+    exit 1
+fi
+
 if [ -e ".git/config" ] && grep -q "python-project" .git/config; then
     echo "In correct git, proceeding..."
 else

@@ -13,12 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 def cli_run(args):
-    ae = Run(**vars(args))
-
-    if ae.run() is not None:
-        sys.exit(True)
-    else:
-        sys.exit(False)
+    print("Running app %s in version %s" % (__PROJECT__, __VERSION__))
 
 class CLI():
 
