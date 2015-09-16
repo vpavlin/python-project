@@ -34,7 +34,7 @@ class CLI():
             "-V",
             "--version",
             action='version',
-            version='%s %s' % (__PROJECT, __VERSION__),
+            version='%s %s' % (__PROJECT__, __VERSION__),
             help="show the version and exit.")
         # TODO refactor program name and version to some globals
 
@@ -61,17 +61,19 @@ class CLI():
             action="store_true",
             help=("Don't change any data, just print the steps."))
 
-        parser_stop = subparsers.add_parser("run")
-        parser_stop.add_argument(
+        subparsers = self.parser.add_subparsers()
+
+        parser_verb = subparsers.add_parser("verb")
+        parser_verb.add_argument(
             "--arg",
             dest="arg",
             help="Some argument..")
 
-        parser_stop.add_argument(
+        parser_verb.add_argument(
             "VERB",
             help="Some VERB to do some stuff")
 
-        parser_stop.set_defaults(func=cli_stop)
+        parser_verb.set_defaults(func=cli_run)
 
     def run(self):
         self.set_arguments()

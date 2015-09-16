@@ -2,7 +2,7 @@
 import re
 
 from setuptools import setup, find_packages
-from $PROJECT.constants import __PROJECT__, __DESCRIPTION__, __VERSION__
+from $PROJECT$.constants import __PROJECT__, __DESCRIPTION__, __VERSION__
 
 
 def _get_requirements(path):
