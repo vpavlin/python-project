@@ -21,13 +21,13 @@ if ! [ -d ${TO} ]; then
 fi
 
 echo "Copying files to the destination directory"
-rsync -ar --verbose --exclude .git --exclude .*swp * ${TO} 
+rsync -ar --verbose --exclude '.git' --exclude '.*swp' * ${TO} 
 
 echo "Removing prep script"
 rm -f ${TO}/prep.sh
 
 echo "Replacing \$PROJECT\$ with ${PROJECT}"
-files=$(grep -rl '\$PROJECT\$' . | sed "s#^.#/${TO}#")
+files=$(grep -rl '\$PROJECT\$' ${TO})
 sed -i "s/\\\$PROJECT\\\$/${PROJECT}/g" ${files}
 
 echo "Changing project dir name to ${PROJECT}"
