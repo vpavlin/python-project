@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 def cli_run(args):
-    print("Running app %s in version %s" % (__PROJECT__, __VERSION__))
+    print("Running app %s in version %s.\n You said %s" % (__PROJECT__, __VERSION__, args.VERB))
 
 class CLI():
 
